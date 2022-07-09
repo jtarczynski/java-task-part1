@@ -1,14 +1,15 @@
-package org.example;
+package org.example.models;
 
-import lombok.AllArgsConstructor;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
+import org.example.exception.AppException;
+import org.example.exception.Error;
 
 @AllArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode
+@Builder
+@ToString
 public class Student {
 
     Long studentId;

@@ -1,7 +1,8 @@
-package org.example;
+package org.example.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import org.example.models.HoursRange;
 
 @AllArgsConstructor
 @Getter
@@ -13,4 +14,7 @@ public enum Room {
 
     private final HoursRange hoursRange;
 
+    public boolean checkHour(int hour) {
+        return hoursRange.getOpen_hour() <= hour && hoursRange.getClose_hour() >= hour;
+    }
 }
