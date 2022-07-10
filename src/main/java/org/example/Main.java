@@ -4,6 +4,7 @@ import org.example.datainitializer.DataInitializer;
 import org.example.exception.AppException;
 import org.example.exception.Error;
 import org.example.models.Helper;
+import org.example.models.Room;
 import org.example.models.Student;
 
 import java.util.List;
@@ -17,10 +18,10 @@ public class Main {
         Random random = new Random();
 
         students.forEach(student -> {
-            Helper.serve(student, "A123", random.nextInt(24));
-            System.out.println(Helper.generateRaport(student));
+            String roomNumber = Room.randomEnumValue();
+            Helper.serve(student, roomNumber, random.nextInt(24));
+            System.out.println(Helper.generateRaport(student, roomNumber));
         });
-
 
         while (true) {
             System.out.println("Enter the room number: ");
@@ -35,7 +36,7 @@ public class Main {
                     .ifPresentOrElse(
                             student -> {
                                 Helper.serve(student, roomNumber, hour);
-                                System.out.println(Helper.generateRaport(student));
+                                System.out.println(Helper.generateRaport(student, roomNumber));
                             }, () -> {
                                 throw new AppException(Error.ID_NOT_FOUND);
                             });

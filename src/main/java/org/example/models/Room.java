@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import org.example.models.HoursRange;
 
+import java.util.Random;
+
 @AllArgsConstructor
 @Getter
 public enum Room {
@@ -16,5 +18,9 @@ public enum Room {
 
     public boolean checkHour(int hour) {
         return hoursRange.getOpen_hour() <= hour && hoursRange.getClose_hour() >= hour;
+    }
+
+    public static String randomEnumValue() {
+        return Room.values()[new Random().nextInt(Room.values().length)].toString();
     }
 }

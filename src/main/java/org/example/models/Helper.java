@@ -8,14 +8,15 @@ import lombok.Setter;
 import org.example.exception.AppException;
 import org.example.exception.Error;
 
+import java.text.SimpleDateFormat;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @AllArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode
 public class Helper {
-
 
     public static void serve(Student student, String roomNumber, int hour) {
         Room room = null;
@@ -31,19 +32,21 @@ public class Helper {
         }
     }
 
-    /*
-    TODO > Proper formatting
-     */
-
-    public static String generateRaport(Student student) {
+    public static String generateRaport(Student student, String roomNumber) {
         return "--------------------------------------------------------------------" +
                 "\n" +
-                String.format("%" + 20 + "s", " ") +
-                "STUDENT" + student.getStudentId() + "\n" +
+                String.format("%19s", " ") + "STUDENT " + student.getStudentId() +
+                "\n" + "\n" +
+                "First Name" + String.format("%14s", " ") + "|" +
+                String.format("%3s", " ") +
+                String.format("%-20s", student.firstName) + "|" + "\n" +
+                "Second Name" + String.format("%13s", " ") + "|" +
+                String.format("%3s", " ") +
+                String.format("%-20s", student.secondName) + "|" +
+                "\n" + "\n" +
+                "Raport generated on " +
+                LocalDateTime.now().format(DateTimeFormatter.ofPattern("dd-MM-yyyy HH:mm")) +
                 "\n" +
-                "First Name" + String.format("%" + 5 + "s", " ") +
-                "|" + String.format("%" + 3 + "s", " ") + student.firstName +
-                String.format("%" + 10 + "s", " ") +
-                LocalDateTime.now();
+                "Room number: " + roomNumber;
     }
 }
