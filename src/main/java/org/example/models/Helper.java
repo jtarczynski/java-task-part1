@@ -19,7 +19,7 @@ import java.time.format.DateTimeFormatter;
 public class Helper {
 
     public static void serve(Student student, String roomNumber, int hour) {
-        Room room = null;
+        Room room;
         try {
             room = Room.valueOf(roomNumber);
         } catch (IllegalArgumentException ex) {

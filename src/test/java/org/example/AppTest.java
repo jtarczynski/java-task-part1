@@ -1,20 +1,22 @@
 package org.example;
 
-import static org.junit.Assert.assertTrue;
-
-import org.junit.Test;
+import org.example.models.Student;
+import org.junit.gen5.api.BeforeEach;
+import org.junit.gen5.api.Test;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
+
+    @BeforeEach
+    public void init() {
+        Student student = new Student();
+    }
+
     @Test
-    public void shouldAnswerWithTrue()
-    {
-        assertTrue( true );
+    public void shouldReturnFalseWhenHourNotInHoursRange() {
+
     }
 }

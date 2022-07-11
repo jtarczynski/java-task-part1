@@ -1,8 +1,6 @@
 package org.example.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import org.example.models.HoursRange;
+import lombok.*;
 
 import java.util.Random;
 
@@ -13,6 +11,16 @@ public enum Room {
     B123(new HoursRange(9, 17)),
     C124(new HoursRange(9, 13)),
     D124(new HoursRange(17, 20));
+
+    @AllArgsConstructor
+    @Setter
+    @Getter
+    @EqualsAndHashCode
+    @ToString
+    private static class HoursRange {
+        int open_hour;
+        int close_hour;
+    }
 
     private final HoursRange hoursRange;
 

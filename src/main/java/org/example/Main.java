@@ -17,13 +17,14 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-        students.forEach(student -> {
-            String roomNumber = Room.randomEnumValue();
-            Helper.serve(student, roomNumber, random.nextInt(24));
-            System.out.println(Helper.generateRaport(student, roomNumber));
-        });
+//        students.forEach(student -> {
+//            String roomNumber = Room.randomEnumValue();
+//            Helper.serve(student, roomNumber, random.nextInt(24));
+//            System.out.println(Helper.generateRaport(student, roomNumber));
+//        });
 
         while (true) {
+            System.out.println();
             System.out.println("Enter the room number: ");
             String roomNumber = scanner.nextLine();
             System.out.println("Enter the hour: ");

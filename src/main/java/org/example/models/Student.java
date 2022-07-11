@@ -5,6 +5,7 @@ import org.example.exception.AppException;
 import org.example.exception.Error;
 
 @AllArgsConstructor
+@NoArgsConstructor
 @Setter
 @Getter
 @EqualsAndHashCode

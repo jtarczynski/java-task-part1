@@ -14,56 +14,56 @@ public class DataInitializer {
         students.add(Student.builder()
                 .studentId(242934L)
                 .firstName("Kamil")
-                .secondName("Matuszewski")
+                .secondName("Marcin")
                 .studyType(StudyType.FULL_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(242452L)
                 .firstName("Alicja")
-                .secondName("Celinska")
+                .secondName("Marta")
                 .studyType(StudyType.FULL_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(246313L)
                 .firstName("Karolina")
-                .secondName("Pat")
+                .secondName("Anastazja")
                 .studyType(StudyType.FULL_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(285933L)
                 .firstName("Julian")
-                .secondName("Tarczyński")
+                .secondName("Mikołaj")
                 .studyType(StudyType.FULL_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(257823L)
                 .firstName("Maciek")
-                .secondName("Wasilewski")
+                .secondName("Konrad")
                 .studyType(StudyType.PART_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(295834L)
                 .firstName("Ola")
-                .secondName("Godlewska")
+                .secondName("Wiktoria")
                 .studyType(StudyType.PART_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(285935L)
                 .firstName("Mateusz")
-                .secondName("Dorski")
+                .secondName("Grzegorz")
                 .studyType(StudyType.PART_TIME)
                 .build());
 
         students.add(Student.builder()
                 .studentId(267498L)
                 .firstName("Piotrek")
-                .secondName("Kowalski")
+                .secondName("Tomek")
                 .studyType(StudyType.PART_TIME)
                 .build());
 
