@@ -8,9 +8,10 @@ import java.util.List;
 
 public class DataInitializer {
 
-    public static List<Student> InitializeData() {
+    public static List<Student> InitializeData() { //TODO method name should be in lowercase
         List<Student> students = new ArrayList<>();
 
+        // TODO A nice idea to use the builder here ;)
         students.add(Student.builder()
                 .studentId(242934L)
                 .firstName("Kamil")

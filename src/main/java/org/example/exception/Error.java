@@ -3,6 +3,7 @@ package org.example.exception;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 
+//Nice idea -> we have a similar approach with code errors in the project as well
 @AllArgsConstructor
 @Getter
 public enum Error {

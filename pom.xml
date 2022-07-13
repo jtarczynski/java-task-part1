@@ -5,11 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.example</groupId>
-    <artifactId>Password_Crack_Threads_App</artifactId>
+    <artifactId>Password_Crack_Threads_App</artifactId> <!-- TODO where does this artifactId come from? :P  -->
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
         <dependency>
+            <!-- Good idea to use this -> it makes the code look simpler -->
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
@@ -20,6 +21,13 @@
             <groupId>org.junit</groupId>
             <artifactId>junit5-engine</artifactId>
             <version>5.0.0-ALPHA</version>
+            <!-- TODO small thing for future -> it is recommended to use the stable versions (not ALPHA) -->
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>

@@ -7,7 +7,7 @@ import java.util.Random;
 @AllArgsConstructor
 @Getter
 public enum Room {
-    A123(new HoursRange(8, 16)),
+    A123(new HoursRange(8, 16)), //TODO I think it could also be done without the extra HoursRange class -> just an enum with two variables - but this approach is good too
     B123(new HoursRange(9, 17)),
     C124(new HoursRange(9, 13)),
     D124(new HoursRange(17, 20));
