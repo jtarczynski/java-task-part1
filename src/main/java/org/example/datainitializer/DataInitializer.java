@@ -8,7 +8,7 @@ import java.util.List;
 
 public class DataInitializer {
 
-    public static List<Student> InitializeData() {
+    public static List<Student> initializeData() {
         List<Student> students = new ArrayList<>();
 
         students.add(Student.builder()

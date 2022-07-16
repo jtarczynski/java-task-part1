@@ -2,8 +2,8 @@ package org.example;
 
 import org.example.datainitializer.DataInitializer;
 import org.example.exception.AppException;
-import org.example.exception.Error;
-import org.example.models.Helper;
+import org.example.helpers.Deanery;
+import org.example.helpers.StudentDisplay;
 import org.example.models.Room;
 import org.example.models.Student;
 
@@ -13,15 +13,12 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        List<Student> students = DataInitializer.InitializeData();
+        List<Student> students = DataInitializer.initializeData();
         Scanner scanner = new Scanner(System.in);
         Random random = new Random();
 
-//        students.forEach(student -> {
-//            String roomNumber = Room.randomEnumValue();
-//            Helper.serve(student, roomNumber, random.nextInt(24));
-//            System.out.println(Helper.generateRaport(student, roomNumber));
-//        });
+        students.forEach(student ->
+                System.out.println(Deanery.serve(student, Room.randomEnumValue(), random.nextInt(24))));
 
         while (true) {
             System.out.println();
@@ -31,16 +28,7 @@ public class Main {
             int hour = scanner.nextInt();
             System.out.println("Enter the student ID: ");
             Long studentId = scanner.nextLong();
-            students.stream()
-                    .filter(student -> student.getStudentId().equals(studentId))
-                    .findFirst()
-                    .ifPresentOrElse(
-                            student -> {
-                                Helper.serve(student, roomNumber, hour);
-                                System.out.println(Helper.generateRaport(student, roomNumber));
-                            }, () -> {
-                                throw new AppException(Error.ID_NOT_FOUND);
-                            });
+            StudentDisplay.displayStudents(students, studentId, roomNumber, hour);
             scanner.nextLine();
         }
     }

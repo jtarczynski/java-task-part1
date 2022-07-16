@@ -15,8 +15,4 @@ public enum StudyType {
 
     private final List<Room> rooms;
 
-    /* I thought about using HashSet here of pairs HoursRange-RoomID(String).
-       There would be no need for Room class, but it would be less readable, so I
-       choose another solution.
-     */
 }

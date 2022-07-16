@@ -13,12 +13,12 @@ import org.example.exception.Error;
 @ToString
 public class Student {
 
-    Long studentId;
+    private Long studentId;
 
-    String firstName;
+    private String firstName;
 
-    String secondName;
+    private String secondName;
 
-    StudyType studyType;
+    private StudyType studyType;
 
 }
